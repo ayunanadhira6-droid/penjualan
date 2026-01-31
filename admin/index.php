@@ -69,31 +69,28 @@ exit;
     <table class="table table-bordered table-striped">
         <tr>
             <th>No</th>
-            <th>Invoice</th>
-            <th>Pelanggan</th>
-            <th>Tanggal Penjualan</th>
+            <th>ID Jual</th>
+            <th>Tanggal</th>
+            <th>Kasir</th>
             <th>Total Harga</th>
             <th>OPSI</th>
         </tr>
-
-      
 <?php
+include '../koneksi.php';
+$data = mysqli_query($koneksi, "SELECT penjualan.*, user.user_nama FROM penjualan JOIN user ON penjualan.user_id = user.user_id");
 $no=1;
-$data = mysqli_query($koneksi, "select *from penjualan,user,barang WHERE penjualan.user_id = user.user_id ORDER BY id_jual DESC");
 while ($d=mysqli_fetch_array($data)){
-?>
+    ?>
     <tr>
         <td><?php echo $no++; ?></td>
-        <td><?php echo $d['user_id']; ?></td>
-        <td><?php echo $d['username']; ?></td>
+        <td><?php echo $d['id_jual']; ?></td>
         <td><?php echo $d['tgl_jual']; ?></td>
-        <td><?php echo "Rp." .number_format($d['total_harga']); ?></td>
+        <td><?php echo $d['user_nama']; ?></td>
+        <td><?php echo $d['total_harga']; ?></td>
         <td>
-            <a href="invoice.php?id=<?php echo $d['id_jual']; ?>" class="btn btn-sm btn-warning">invoice</a>
-            <a href="penjualan_edit.php?id=<?php echo $d['id_jual']; ?>" class="btn btn-sm btn-info">Edit</a>
-            <a href="penjualan_hapus.php?id=<?php echo $d['id_jual']; ?>" class="btn btn-sm btn-danger">Hapus</a>
+            <a href="penjualan_invoice.php?id=<?php echo $d['id_jual']; ?>" class="btn btn-sm btn-info">Invoice</a>
         </td>
-</tr>
+    </tr>
 <?php
 }
 ?>
