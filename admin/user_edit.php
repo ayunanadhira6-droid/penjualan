@@ -37,7 +37,7 @@ include 'header.php';
                         <label>User Status</label>
                         <select name="user_status" class="form-control">
                              <option value="1" <?php if($d['user_status'] == "1"){ echo "selected"; } ?>>Admin</option>
-                             <option value="2" <?php if($d['user_status'] == "2"){ echo "selected"; } ?>>User</option>
+                             <option value="2" <?php if($d['user_status'] == "2"){ echo "selected"; } ?>>Kasir</option>
                         </select>
                     </div>
                    <br>

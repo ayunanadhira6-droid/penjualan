@@ -63,7 +63,7 @@ exit;
 </div>
     <div class="panel">
 <div class="panel-heading">
-    <h4>Data Penjualan</h4>
+    <h4>Riwayat Data Penjualan</h4>
 </div>
 <div class="panel-body">
     <table class="table table-bordered table-striped">
@@ -71,7 +71,7 @@ exit;
             <th>No</th>
             <th>Invoice</th>
             <th>Pelanggan</th>
-            <th>Tanggal Pembelian</th>
+            <th>Tanggal Penjualan</th>
             <th>Total Harga</th>
             <th>OPSI</th>
         </tr>
@@ -79,14 +79,14 @@ exit;
       
 <?php
 $no=1;
-$data = mysqli_query($koneksi, "select *from penjualan,user,barang WHERE penjualan.user_id = user.user_id AND penjualan.id_barang = barang.id_barang ORDER BY id_jual DESC");
+$data = mysqli_query($koneksi, "select *from penjualan,user,barang WHERE penjualan.user_id = user.user_id ORDER BY id_jual DESC");
 while ($d=mysqli_fetch_array($data)){
 ?>
     <tr>
         <td><?php echo $no++; ?></td>
         <td><?php echo $d['user_id']; ?></td>
         <td><?php echo $d['username']; ?></td>
-        <td><?php echo $d['tgl_beli']; ?></td>
+        <td><?php echo $d['tgl_jual']; ?></td>
         <td><?php echo "Rp." .number_format($d['total_harga']); ?></td>
         <td>
             <a href="invoice.php?id=<?php echo $d['id_jual']; ?>" class="btn btn-sm btn-warning">invoice</a>

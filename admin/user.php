@@ -32,7 +32,7 @@ while ($d=mysqli_fetch_array($data)){
             if ($d['user_status']=='1'){
                 echo "<div class='label label-success'>Admin</div>";
             }elseif ($d['user_status']=='2'){
-                echo"<div class='label label-info'>User</div>";
+                echo"<div class='label label-info'>Kasir</div>";
             }
         ?>
         </td>
