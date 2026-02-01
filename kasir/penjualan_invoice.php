@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sistem Admin Penjualan</title>
+    <title>Sistem Kasir Penjualan</title>
     <link rel="stylesheet" href="../asset/css/bootstrap.css">
 </head>
 <body>
-<?php
+    <?php
         session_start();
         if ($_SESSION['status']!="login") {
             header("location:../index.php?pesan=belum_login");
         }
         include '../koneksi.php';
     ?>
+
 <div class="col-md-10 col-md-offset-1">
 
 <?php
@@ -22,6 +23,11 @@ while ($t = mysqli_fetch_array($penjualan)) {
 ?>
 
 <center><h2>STRUK PENJUALAN</h2></center>
+
+<a href="penjualan_invoice_cetak.php?id=<?= $id ?>" target="_blank"
+   class="btn btn-primary pull-right">
+   <i class="glyphicon glyphicon-print"></i> Cetak
+</a>
 
 <br><br>
 
@@ -68,8 +74,5 @@ while ($d = mysqli_fetch_array($detail)) {
 <?php } ?>
 
 </div>
-<script type="text/javascript">
-    window.print();
-</script>
 </body>
 </html>

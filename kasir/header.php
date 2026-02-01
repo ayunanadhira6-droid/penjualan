@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sistem Informasi Penjualan</title>
+    <title>Sistem Kasir Penjualan</title>
     <link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.css">
     <script type="text/javascript" src="../asset/js/jquery.js"></script>
     <script type="text/javascript" src="../asset/js/bootstrap.js"></script>
@@ -36,7 +36,7 @@
                 <ul class="nav navbar-nav">
                     <li class=" "><a href="index.php"><i class="glyphicon glyphicon-home"></i> Home</a></li>
 
-                    <li><a href="pinjam.php"><i class="glyphicon glyphicon-list-alt"></i> Pinjam</a></li>
+                    <li><a href="barang.php"><i class="glyphicon glyphicon-list-alt"></i> Penjualan</a></li>
 
                     <li><a href="logout.php"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
                 </ul>

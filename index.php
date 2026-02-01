@@ -11,7 +11,7 @@
 <body style="background: #f0f0f0;">
     <br><br><br>
     <center>
-        <h2>SISTEM INFORMASI PENJUALAN<br> REKAYASA PERANGKAT LUNAK SMKN 3 KENDAL</h2>
+        <h2>SISTEM PENJUALAN<br> REKAYASA PERANGKAT LUNAK SMKN 3 KENDAL</h2>
     </center>
 <br><br>
 <div class="container">

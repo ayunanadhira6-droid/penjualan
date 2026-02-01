@@ -17,7 +17,7 @@ exit;
 
 <div class="container">
     <div class="alert alert-info text-center">
-        <h4 style="margin-bottom: 0px;"> <b>Sistem Informasi Penjualan</b></h4>
+        <h4 style="margin-bottom: 0px;"> <b>Sistem Admin Penjualan</b></h4>
     </div>
 <div class="panel">
     <div class="panel-heading">

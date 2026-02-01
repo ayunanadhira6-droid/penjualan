@@ -5,17 +5,13 @@ include 'koneksi.php';
 $username = $_POST['username'];
 $password = md5($_POST['password']);
 
-$data = mysqli_query($koneksi, 
-    "SELECT * FROM user 
-     WHERE username='$username' AND password='$password'"
-);
+$data = mysqli_query($koneksi,"SELECT * FROM user WHERE username='$username' AND password='$password'");
 
 $cek = mysqli_num_rows($data);
 
 if ($cek > 0) {
     $d = mysqli_fetch_assoc($data);
 
-    $_SESSION['status'] = "login"; // 🔥 INI WAJIB
     $_SESSION['user_id'] = $d['user_id'];
     $_SESSION['user_status'] = $d['user_status'];
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sistem Informasi Penjualan</title>
+    <title>Sistem Admin Penjualan</title>
     <link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.css">
     <script type="text/javascript" src="../asset/js/jquery.js"></script>
     <script type="text/javascript" src="../asset/js/bootstrap.js"></script>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sistem Admin Penjualan</title>
+    <title>Sistem Kasir Penjualan</title>
     <link rel="stylesheet" href="../asset/css/bootstrap.css">
 </head>
 <body>

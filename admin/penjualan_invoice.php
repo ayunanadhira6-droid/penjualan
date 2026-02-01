@@ -1,25 +1,23 @@
-<?php
-session_start();
-if ($_SESSION['status'] != "login") {
-    header("location:../index.php?pesan=belum_login");
-    exit;
-}
-include '../koneksi.php';
-$id = $_GET['id'];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Struk Penjualan</title>
+    <title>Sistem Admin Penjualan</title>
     <link rel="stylesheet" href="../asset/css/bootstrap.css">
 </head>
 <body>
+    <?php
+        session_start();
+        if ($_SESSION['status']!="login") {
+            header("location:../index.php?pesan=belum_login");
+        }
+        include '../koneksi.php';
+    ?>
 
 <div class="col-md-10 col-md-offset-1">
 
 <?php
+$id=$_GET['id'];
 $penjualan = mysqli_query($koneksi,"SELECT penjualan.*, user.username FROM penjualan JOIN user ON penjualan.user_id = user.user_id WHERE penjualan.id_jual='$id'");
 while ($t = mysqli_fetch_array($penjualan)) {
 ?>
@@ -71,7 +69,7 @@ while ($d = mysqli_fetch_array($detail)) {
 </tr>
 </table>
 
-<p class="text-center"><i>"Terima Kasih Atas Kepercayaan Anda"</i></p>
+<p class="text-center"><i>"Terima Kasih Telah Berbelanja"</i></p>
 
 <?php } ?>
 
