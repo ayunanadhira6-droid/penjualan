@@ -29,14 +29,14 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">                    
                     <span class="sr-only"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">User</a>
+                <a class="navbar-brand" href="index.php">Kasir</a>
             </div>
 
             <div class="navbar navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class=" "><a href="index.php"><i class="glyphicon glyphicon-home"></i> Home</a></li>
 
-                    <li><a href="barang.php"><i class="glyphicon glyphicon-list-alt"></i> Penjualan</a></li>
+                    <li><a href="barang.php"><i class="glyphicon glyphicon-shopping-cart"></i> Penjualan</a></li>
 
                     <li><a href="logout.php"><i class="glyphicon glyphicon-log-out"></i> Log Out</a></li>
                 </ul>
